@@ -4,7 +4,7 @@ import Button from "./ui/Button";
 
 export default function Hero() {
   return (
-    <section className="hero-wrap relative h-screen min-h-[700px]  px-12 pb-24 overflow-hidden">
+    <section className="hero-wrap relative h-screen min-h-[700px] px-6 pb-16 lg:pb-24 overflow-hidden">
       {/* Background */}
       <div
         className="hero-bg absolute inset-0"
@@ -23,13 +23,13 @@ export default function Hero() {
 
           <h1
             className="font-display font-light text-white leading-[.92] max-w-lg"
-            style={{ fontSize: "clamp(4rem,5.5vw,5.5rem)" }}
+            style={{ fontSize: "clamp(2.5rem,5.5vw,5.5rem)" }}
           >
             3D product <em className="italic text-gold-lt">visualization</em>{" "}
             <br />& animation
           </h1>
 
-          <p className="mt-6 max-w-lg text-lg text-stone/75">
+          <p className="mt-6 max-w-lg text-base lg:text-lg text-stone/75">
             Hi, I'm Soumak. I create stunning and cinematic 3D product visuals
             and animations for brands that want honest, quality work.
           </p>

@@ -7,12 +7,12 @@ export default function ProjectInfo({ info }: { info: object }) {
       <Container>
         <div
           className={cn(
-            "px-12 py-10 grid gap-8 divide-x divide-white/[.05]",
-            `grid-cols-${Object.keys(info).length ?? 4}`,
+            "px-12 py-10 grid gap-8 lg:divide-x lg:divide-white/[.05]",
+            `grid-cols-1 lg:grid-cols-3`,
           )}
         >
           {Object.entries(info).map(([lbl, val]) => (
-            <div key={lbl} className="px-8 first:pl-0">
+            <div key={lbl} className="lg:px-8 first:pl-0">
               <p className="text-xs tracking-[.28em] uppercase text-gold mb-2">
                 {lbl}
               </p>

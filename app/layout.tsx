@@ -10,7 +10,7 @@ const bebasNeue = Bebas_Neue({
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-outfit",
 });
 

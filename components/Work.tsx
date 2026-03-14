@@ -3,31 +3,11 @@ import R from "./ScrollReveal";
 import Container from "./ui/Container";
 import SectionHeading from "./ui/SectionHeading";
 import Button from "./ui/Button";
-
-const projects = [
-  {
-    slug: "aroma-perfume",
-    src: "/images/project-1.png",
-    alt: "Aroma Perfume",
-    cat: "Product Modeling · Lighting · Animation",
-    title: "Aroma Perfume — Fragrance Collection",
-    cls: "col-span-6",
-    delay: undefined,
-  },
-  // {
-  //   slug: "helios-earbuds-launch",
-  //   src: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800&q=80",
-  //   alt: "Cosmetics Campaign",
-  //   cat: "Animation · Art Direction",
-  //   title: "Aura — Skin Series Campaign",
-  //   cls: "col-span-6",
-  //   delay: "d1" as const,
-  // },
-];
+import { PROJECTS } from "@/lib/data";
 
 export default function Work() {
   return (
-    <section id="work" className="bg-cream px-6 py-28">
+    <section id="work" className="bg-cream px-6 py-16 lg:py-28">
       <Container>
         {/* Header */}
         <SectionHeading
@@ -41,15 +21,11 @@ export default function Work() {
               that convert
             </>
           }
-          button={{
-            href: "/projects",
-            title: "More Projects",
-          }}
         />
 
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-          {projects.map((p) => (
+          {PROJECTS.map((p) => (
             <R
               key={p.title}
               className={`w-card ${p.cls} relative overflow-hidden cursor-pointer bg-ink3`}
@@ -62,23 +38,29 @@ export default function Work() {
                 <img
                   src={p.src}
                   alt={p.alt}
-                  className="w-img w-full h-full object-cover"
+                  className="w-img w-full h-full object-cover aspect-square"
                 />
                 <div
-                  className="w-over absolute inset-0 flex flex-col justify-end p-12"
+                  className="w-over absolute inset-0 flex flex-col justify-end p-6 lg:p-12"
                   style={{
                     background:
                       "linear-gradient(to top,rgba(8,8,8,.88) 0%,transparent 55%)",
                   }}
                 >
-                  <p className="text-[.57rem] tracking-[.24em] uppercase text-gold mb-1">
+                  <p className="hidden lg:block text-xs tracking-[.24em] uppercase text-gold mb-1">
                     {p.cat}
                   </p>
-                  <p className="font-display text-xl text-white">{p.title}</p>
+                  <p className="font-display text-2xl lg:text-3xl text-white">
+                    {p.title}
+                  </p>
                 </div>
               </Link>
             </R>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <Button href="/projects">View More Work</Button>
         </div>
       </Container>
     </section>

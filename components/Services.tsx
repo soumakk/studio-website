@@ -31,7 +31,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-ink py-28 px-6">
+    <section id="services" className="bg-ink px-6 py-16 lg:py-28">
       <Container>
         <SectionHeading
           subHeading="What I Do"

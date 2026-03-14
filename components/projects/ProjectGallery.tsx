@@ -61,14 +61,14 @@ export default function ProjectGallery({
   };
 
   return (
-    <section className="bg-ink px-12 my-28">
+    <section className="bg-ink px-6 py-16 lg:py-28">
       <Container>
         <div className="flex items-center gap-4 mb-12 text-sm tracking-[.35em] uppercase text-gold">
           <span className="block w-8 h-px bg-gold" /> {title}
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           {gallery?.map((item, i) => {
             const isWide = item.span === "wide";
             return (

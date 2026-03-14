@@ -19,8 +19,8 @@ export default function SectionHeading({
   const isDark = theme === "dark";
 
   return (
-    <R className="flex items-end justify-between mb-16">
-      <div>
+    <R className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 lg:mb-16">
+      <div className="mb-8 lg:mb-">
         <div
           className={`flex items-center gap-4 mb-4 text-sm tracking-[.35em] uppercase text-gold`}
         >
@@ -33,11 +33,13 @@ export default function SectionHeading({
         </h2>
       </div>
 
-      {button ? (
-        <Button size="sm" href={button.href}>
-          {button.title}
-        </Button>
-      ) : null}
+      <div>
+        {button ? (
+          <Button size="sm" href={button.href}>
+            {button.title}
+          </Button>
+        ) : null}
+      </div>
     </R>
   );
 }

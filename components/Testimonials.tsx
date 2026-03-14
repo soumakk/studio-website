@@ -31,7 +31,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-ink2 px-12 py-28">
+    <section id="testimonials" className="bg-ink2 px-6 py-16 lg:py-28">
       <Container>
         <SectionHeading
           subHeading="Client Words"

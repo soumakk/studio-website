@@ -13,7 +13,7 @@ const tags = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-cream py-28 px-6">
+    <section id="about" className="bg-cream px-6 py-16 lg:py-28">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <R delay="d1" className="flex flex-col gap-8">

@@ -110,13 +110,13 @@ body::after {
     transform: scale(1.07);
     filter: brightness(0.7);
 }
-.w-over {
+/*.w-over {
     opacity: 0;
     transition: opacity 0.4s;
 }
 .w-card:hover .w-over {
     opacity: 1;
-}
+}*/
 .w-arrow {
     transition:
         background 0.3s,

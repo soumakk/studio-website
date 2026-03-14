@@ -10,7 +10,7 @@ export default function ProjectHero({
   tagline?: string;
 }) {
   return (
-    <section className="relative h-screen min-h-[640px] px-12 pb-20 overflow-hidden">
+    <section className="relative h-screen min-h-[640px] px-6 pb-16 lg:pb-24 overflow-hidden">
       <Container className="flex items-end h-full">
         <div
           className="absolute inset-0"

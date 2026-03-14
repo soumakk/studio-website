@@ -6,12 +6,13 @@ import Container from "./ui/Container";
 import SectionHeading from "./ui/SectionHeading";
 import { EMAIL, SOCIAL_LINKS, YEAR } from "@/lib/data";
 import UnderlineLink from "./ui/UnderlineLink";
+import Button from "./ui/Button";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="contact" className="bg-ink px-6 py-28">
+    <section id="contact" className="bg-ink px-6 py-16 lg:py-28">
       <Container>
         <SectionHeading
           subHeading=" Let's Work Together"
@@ -50,9 +51,8 @@ export default function Contact() {
               </p>
               <div className="flex flex-col gap-2">
                 {SOCIAL_LINKS.map(({ href, label }) => (
-                  <p>
+                  <p key={label}>
                     <UnderlineLink
-                      key={label}
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export default function Contact() {
                   setSent(true);
                 }}
               >
-                <div className="grid grid-cols-2 gap-5 mb-5">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
                   {[
                     ["Full Name", "text", "Jane Smith"],
                     ["Company / Brand", "text", "Acme Co."],
@@ -163,12 +163,9 @@ export default function Contact() {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="btn-cta inline-flex items-center gap-5 bg-gold text-ink font-bold text-[.7rem] tracking-[.22em] uppercase px-9 py-4 border-none cursor-pointer"
-                >
+                <Button type="submit" className="w-full lg:w-auto">
                   Send Brief →
-                </button>
+                </Button>
               </form>
             )}
           </R>
