@@ -1,6 +1,8 @@
 import Link from "next/link";
 import R from "./ScrollReveal";
-import Container from "./Container";
+import Container from "./ui/Container";
+import SectionHeading from "./ui/SectionHeading";
+import Button from "./ui/Button";
 
 const projects = [
   {
@@ -25,30 +27,28 @@ const projects = [
 
 export default function Work() {
   return (
-    <section id="work" className="bg-ink2 px-12 py-28">
+    <section id="work" className="bg-cream px-6 py-28">
       <Container>
         {/* Header */}
-        <R className="flex items-end justify-between mb-16">
-          <div>
-            <div className="flex items-center gap-4 mb-4 text-[.6rem] tracking-[.35em] uppercase text-gold">
-              <span className="block w-8 h-px bg-gold" /> Selected Works
-            </div>
-            <h2 className="font-display font-light leading-none text-white text-5xl">
+        <SectionHeading
+          theme="light"
+          subHeading="Selected Works"
+          heading={
+            <>
+              {" "}
               Crafted <em className="italic text-gold-lt">renders</em>
               <br />
               that convert
-            </h2>
-          </div>
-          <Link
-            href="/case-study"
-            className="btn-cta inline-flex items-center gap-3 text-[.64rem] tracking-[.2em] uppercase text-stone no-underline"
-          >
-            Show More Work
-          </Link>
-        </R>
+            </>
+          }
+          button={{
+            href: "/projects",
+            title: "More Projects",
+          }}
+        />
 
         {/* Grid */}
-        <div className="grid grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           {projects.map((p) => (
             <R
               key={p.title}

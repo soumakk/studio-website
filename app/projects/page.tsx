@@ -2,7 +2,7 @@ import Link from "next/link";
 import { caseStudies } from "@/lib/cases";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
-import Container from "@/components/Container";
+import Container from "@/components/ui/Container";
 
 export const metadata = {
   title: "Case Studies — Soumak",

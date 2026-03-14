@@ -1,5 +1,5 @@
 "use client";
-import Container from "../Container";
+import Container from "../ui/Container";
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 

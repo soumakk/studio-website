@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import Container from "../Container";
+import Container from "../ui/Container";
 
 export default function ProjectInfo({ info }: { info: object }) {
   return (

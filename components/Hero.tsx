@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Container from "./Container";
+import Container from "./ui/Container";
+import Button from "./ui/Button";
 
 export default function Hero() {
   return (
@@ -16,34 +17,26 @@ export default function Hero() {
 
       <Container className="flex items-end h-full">
         <div className="relative z-10 ">
-          <div className="inline-flex items-center gap-3 mb-7 text-[.6rem] tracking-[.32em] uppercase text-gold border border-gold/30 px-4 py-2">
+          {/*<div className="inline-flex items-center gap-3 mb-7 text-[.6rem] tracking-[.32em] uppercase text-gold border border-gold/30 px-4 py-2">
             Open for Projects &nbsp;·&nbsp; 2025
-          </div>
+          </div>*/}
 
           <h1
-            className="font-display font-light text-white leading-[.92]"
-            style={{ fontSize: "clamp(1.8rem,5.5vw,5.5rem)" }}
+            className="font-display font-light text-white leading-[.92] max-w-lg"
+            style={{ fontSize: "clamp(4rem,5.5vw,5.5rem)" }}
           >
-            Crafting
-            <br />
-            <em className="italic text-gold-lt">visual realities</em>
-            <br />
-            in three
-            <br />
-            dimensions.
+            3D product <em className="italic text-gold-lt">visualization</em>{" "}
+            <br />& animation
           </h1>
 
-          <p className="mt-6 max-w-sm text-[.8rem] leading-[1.95] tracking-[.07em] text-stone/75">
-            Product visualization that sells — modeling, lighting, animation
-            &amp; full art direction for brands that demand extraordinary.
+          <p className="mt-6 max-w-lg text-lg text-stone/75">
+            Hi, I'm Soumak. I create stunning and cinematic 3D product visuals
+            and animations for brands that want honest, quality work.
           </p>
 
-          <Link
-            href="#work"
-            className="btn-cta inline-flex items-center gap-5 mt-10 bg-gold text-ink font-bold text-[.7rem] tracking-[.22em] uppercase px-9 py-4 no-underline"
-          >
+          <Button href="#work" className="mt-10">
             View Selected Work <span>→</span>
-          </Link>
+          </Button>
         </div>
       </Container>
 

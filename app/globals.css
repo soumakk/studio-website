@@ -2,19 +2,28 @@
 
 /* ─── Custom theme tokens ─── */
 @theme {
-    /* Colors */
-    --color-gold: #b8975a;
-    --color-gold-lt: #d4af78;
-    --color-ink: #080808;
-    --color-ink2: #0f0f0f;
-    --color-ink3: #161616;
-    --color-ink4: #1e1e1e;
-    --color-dim: #5a5a5a;
-    --color-stone: #c8c0b4;
+    /* Dark backgrounds — deeper true blacks */
+    --color-ink: #050505;
+    --color-ink2: #0c0c0c;
+    --color-ink3: #141414;
+    --color-ink4: #1c1c1c;
+
+    /* Gold — punchier, more saturated */
+    --color-gold: #c8963e;
+    --color-gold-lt: #e5ae4b;
+    --color-gold-bright: #f0c878;
+
+    /* Text */
+    --color-stone: #e8e2d9;
+    --color-dim: #888480;
+
+    /* Light sections */
+    --color-cream: #f5f2ee;
+    --color-cream2: #edeae5;
 
     /* Fonts — CSS vars injected by next/font */
-    --font-display: var(--font-cormorant), serif;
-    --font-ui: var(--font-syne), sans-serif;
+    --font-display: var(--font-bebasNeue);
+    --font-body: var(--font-outfit);
 
     /* Custom animations */
     --animate-scroll-bar: scrollBar 2s ease-in-out infinite;
@@ -162,7 +171,7 @@ body::after {
         gap 0.3s;
 }
 .btn-cta:hover {
-    background: #d4af78;
+    @apply bg-gold-lt;
     gap: 1.5rem;
 }
 
@@ -172,7 +181,7 @@ body::after {
 }
 .nav-lnk:hover,
 .nav-lnk.on {
-    color: #d4af78;
+    @apply text-gold;
 }
 
 .marquee-track {

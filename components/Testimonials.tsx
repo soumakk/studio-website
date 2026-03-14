@@ -1,5 +1,6 @@
-import Container from "./Container";
+import Container from "./ui/Container";
 import R from "./ScrollReveal";
+import SectionHeading from "./ui/SectionHeading";
 
 const testimonials = [
   {
@@ -32,16 +33,14 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="bg-ink2 px-12 py-28">
       <Container>
-        <R className="flex items-center gap-4 mb-3 text-[.6rem] tracking-[.35em] uppercase text-gold">
-          <span className="block w-8 h-px bg-gold" /> Client Words
-        </R>
-        <R
-          as="h2"
-          delay="d1"
-          className="font-display font-light leading-none text-white mb-16 text-5xl"
-        >
-          What brands <em className="italic text-gold-lt">say</em>
-        </R>
+        <SectionHeading
+          subHeading="Client Words"
+          heading={
+            <>
+              What brands <em className="italic text-gold-lt">say</em>
+            </>
+          }
+        />
 
         <div className="grid grid-cols-3 gap-6">
           {testimonials.map((t) => (
