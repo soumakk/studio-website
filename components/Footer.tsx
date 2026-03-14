@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Container from "./ui/Container";
 import Logo from "./ui/Logo";
-import { SOCIAL_LINKS, YEAR } from "@/lib/data";
+import { SOCIAL_LINKS, CURRENT_YEAR } from "@/lib/data";
 
 const socials = ["in", "be", "ig", "yt"];
 
@@ -14,7 +14,7 @@ export default function Footer() {
           <Logo />
 
           <p className="text-sm  text-dim/90 font-medium text-center">
-            © {YEAR} Soumak. All rights reserved.
+            © {CURRENT_YEAR} Soumak. All rights reserved.
           </p>
         </div>
       </Container>

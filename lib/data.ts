@@ -1,5 +1,5 @@
-export const EMAIL = "soumakkdutta@gmail.com";
-export const YEAR = new Date().getFullYear();
+export const MY_EMAIL = "soumakkdutta@gmail.com";
+export const CURRENT_YEAR = new Date().getFullYear();
 
 export const NAV_LINKS = [
   { href: "/projects", label: "Work" },
@@ -14,15 +14,6 @@ export const SOCIAL_LINKS = [
 ];
 
 export const PROJECTS = [
-  {
-    slug: "aroma-perfume",
-    src: "/images/project-1.png",
-    alt: "Aroma Perfume",
-    cat: "Product Modeling · Lighting · Animation",
-    title: "Aroma Perfume — Fragrance Collection",
-    cls: "col-span-6",
-    delay: undefined,
-  },
   {
     slug: "aroma-perfume",
     src: "/images/project-1.png",
