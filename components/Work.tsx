@@ -4,7 +4,7 @@ import Container from "./Container";
 
 const projects = [
   {
-    slug: "maison-noir-fragrance",
+    slug: "aroma-perfume",
     src: "/images/project-1.png",
     alt: "Aroma Perfume",
     cat: "Product Modeling · Lighting · Animation",
@@ -56,7 +56,7 @@ export default function Work() {
               delay={p.delay}
             >
               <Link
-                href={`/case-study/${p.slug}`}
+                href={`/projects/${p.slug}`}
                 className="block w-full h-full"
               >
                 <img
