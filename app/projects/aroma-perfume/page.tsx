@@ -34,35 +34,41 @@ export default function CaseStudyPage() {
         title="Art Direction"
         gallery={[
           {
-            src: "/images/Perfume Demo.mp4",
+            src: "https://res.cloudinary.com/dpbj59pti/video/upload/v1773602170/Portfolio/Projects/Aroma%20Perfume/Perfume_Animation_1_w4i8rd.mp4",
             alt: "Fragrance bottle hero shot",
             span: "normal",
             type: "video",
           },
           {
-            src: "/images/render-11.png",
+            src: "https://res.cloudinary.com/dpbj59pti/video/upload/v1773602184/Portfolio/Projects/Aroma%20Perfume/Perfume_Animation_2_vgd3h6.mp4",
+            alt: "Fragrance bottle hero shot",
+            span: "normal",
+            type: "video",
+          },
+          {
+            src: "https://res.cloudinary.com/dpbj59pti/image/upload/v1773600634/Portfolio/Projects/Aroma%20Perfume/render-01.png",
             alt: "Fragrance bottle hero shot",
             span: "normal",
           },
           {
-            src: "/images/render-12.png",
-            alt: "Detail cap render",
+            src: "https://res.cloudinary.com/dpbj59pti/image/upload/v1773602027/Portfolio/Projects/Aroma%20Perfume/render-02.png",
+            alt: "Fragrance bottle hero shot",
             span: "normal",
           },
           {
-            src: "/images/render-15.png",
-            alt: "Collection flat lay",
+            src: "https://res.cloudinary.com/dpbj59pti/image/upload/v1773602290/Portfolio/Projects/Aroma%20Perfume/render-12_nyrrwt.png",
+            alt: "Fragrance bottle hero shot",
             span: "normal",
           },
           {
-            src: "/images/render-16.png",
-            alt: "Dark studio lifestyle render",
+            src: "https://res.cloudinary.com/dpbj59pti/image/upload/v1773602294/Portfolio/Projects/Aroma%20Perfume/render-16_acmllf.png",
+            alt: "Fragrance bottle hero shot",
             span: "normal",
           },
         ]}
       />
 
-      <ProjectGallery
+      {/*<ProjectGallery
         title="Product Shots"
         gallery={[
           {
@@ -91,7 +97,7 @@ export default function CaseStudyPage() {
             span: "normal",
           },
         ]}
-      />
+      />*/}
 
       <ProjectCTA />
 

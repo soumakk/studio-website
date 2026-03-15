@@ -2,6 +2,7 @@
 import Container from "../ui/Container";
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { CldImage } from "next-cloudinary";
 
 export interface GalleryImage {
   src: string;
@@ -90,11 +91,17 @@ export default function ProjectGallery({
                     playsInline
                   />
                 ) : (
-                  <img
+                  <CldImage
                     src={item.src}
-                    alt={item.alt}
-                    className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+                    width={540}
+                    height={675}
+                    alt="Description"
                   />
+                  // <img
+                  //   src={item.src}
+                  //   alt={item.alt}
+                  //   className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+                  // />
                 )}
               </div>
             );
@@ -132,8 +139,10 @@ export default function ProjectGallery({
                           playsInline
                         />
                       ) : (
-                        <img
+                        <CldImage
                           src={item.src}
+                          width={540}
+                          height={675}
                           alt={item.alt}
                           className="max-h-[90vh] w-auto max-w-full object-contain select-none"
                           draggable={false}

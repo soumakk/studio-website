@@ -39,14 +39,14 @@ export default function About() {
               />
             </R>
 
-            <p className="text-lg leading-loose text-stone-600 -mt-8">
+            <p className="text-lg leading-relaxed text-stone-600 -mt-8">
               I'm Soumak — a 3D product visualization artist working with
               Blender to create clean, detailed renders and animations. I care
               about craft, honest communication, and work I'm proud to put my
               name on.
             </p>
 
-            <p className="text-lg leading-loose text-stone-600">
+            <p className="text-lg leading-relaxed text-stone-600">
               I'm Soumak — a 3D product visualization artist working with
               Blender to create clean, detailed renders and animations. I care
               about craft, honest communication, and work I'm proud to put my
