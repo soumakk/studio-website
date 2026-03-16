@@ -1,13 +1,12 @@
 "use client";
-import Container from "../ui/Container";
-import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { CldImage } from "next-cloudinary";
+import { getCldImageUrl, getCldVideoUrl } from "next-cloudinary";
+import { useCallback, useEffect, useState } from "react";
+import Container from "../ui/Container";
 
 export interface GalleryImage {
-  src: string;
+  path: string;
   alt: string;
-  span?: "wide" | "tall" | "normal";
   type?: "video" | "image";
 }
 
@@ -71,19 +70,18 @@ export default function ProjectGallery({
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           {gallery?.map((item, i) => {
-            const isWide = item.span === "wide";
+            let url;
+
             return (
               <div
                 key={i}
                 onClick={() => openAt(i)}
-                className={`overflow-hidden bg-ink3 cursor-pointer ${
-                  isWide ? "col-span-12" : "col-span-4"
-                }`}
+                className={`overflow-hidden bg-ink3 cursor-pointer col-span-6`}
                 style={{ aspectRatio: "4/5" }}
               >
                 {item.type === "video" ? (
                   <video
-                    src={item.src}
+                    src={getMediaUrl(item.path, item.type)}
                     className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
                     muted
                     loop
@@ -91,17 +89,11 @@ export default function ProjectGallery({
                     playsInline
                   />
                 ) : (
-                  <CldImage
-                    src={item.src}
-                    width={540}
-                    height={675}
-                    alt="Description"
+                  <img
+                    src={getMediaUrl(item.path, item.type)}
+                    alt={item.alt}
+                    className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
                   />
-                  // <img
-                  //   src={item.src}
-                  //   alt={item.alt}
-                  //   className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
-                  // />
                 )}
               </div>
             );
@@ -124,32 +116,32 @@ export default function ProjectGallery({
             <div className="flex-1 flex items-center justify-center overflow-hidden">
               <div className="w-full h-full" ref={emblaRef}>
                 <div className="flex h-full touch-pan-y">
-                  {gallery?.map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex-[0_0_100%] min-w-0 flex items-center justify-center h-full"
-                    >
-                      {item.type === "video" ? (
-                        <video
-                          src={item.src}
-                          className="max-h-[90vh] w-auto max-w-full object-contain"
-                          controls
-                          autoPlay
-                          loop
-                          playsInline
-                        />
-                      ) : (
-                        <CldImage
-                          src={item.src}
-                          width={540}
-                          height={675}
-                          alt={item.alt}
-                          className="max-h-[90vh] w-auto max-w-full object-contain select-none"
-                          draggable={false}
-                        />
-                      )}
-                    </div>
-                  ))}
+                  {gallery?.map((item, i) => {
+                    return (
+                      <div
+                        key={i}
+                        className="flex-[0_0_100%] min-w-0 flex items-center justify-center h-full"
+                      >
+                        {item.type === "video" ? (
+                          <video
+                            src={getMediaUrl(item.path, item.type)}
+                            className="max-h-[90vh] w-auto max-w-full object-contain"
+                            controls
+                            // autoPlay
+                            loop
+                            // playsInline
+                          />
+                        ) : (
+                          <img
+                            src={getMediaUrl(item.path, item.type)}
+                            alt={item.alt}
+                            className="max-h-[90vh] w-auto max-w-full object-contain select-none"
+                            draggable={false}
+                          />
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -179,4 +171,20 @@ export default function ProjectGallery({
       </Container>
     </section>
   );
+}
+
+function getMediaUrl(path: string, type?: "video" | "image") {
+  if (type === "video") {
+    return getCldVideoUrl({
+      src: path,
+      width: 1920,
+      height: 1080,
+    });
+  } else {
+    return getCldImageUrl({
+      src: path,
+      width: 540,
+      height: 675,
+    });
+  }
 }
