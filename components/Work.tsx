@@ -38,7 +38,7 @@ export default function Work() {
                 <img
                   src={p.src}
                   alt={p.alt}
-                  className="w-img w-full h-full object-cover aspect-square"
+                  className="w-img w-full h-full object-cover aspect-4/5"
                 />
                 <div
                   className="w-over absolute inset-0 flex flex-col justify-end p-6 lg:p-12"

@@ -3,11 +3,13 @@ import useEmblaCarousel from "embla-carousel-react";
 import { getCldImageUrl, getCldVideoUrl } from "next-cloudinary";
 import { useCallback, useEffect, useState } from "react";
 import Container from "../ui/Container";
+import { cn } from "@/lib/utils";
 
 export interface GalleryImage {
   path: string;
   alt: string;
   type?: "video" | "image";
+  fullwidth?: boolean;
 }
 
 export default function ProjectGallery({
@@ -76,13 +78,15 @@ export default function ProjectGallery({
               <div
                 key={i}
                 onClick={() => openAt(i)}
-                className={`overflow-hidden bg-ink3 cursor-pointer col-span-6`}
-                style={{ aspectRatio: "4/5" }}
+                className={cn(
+                  `overflow-hidden bg-ink3 cursor-pointer`,
+                  item.fullwidth ? "col-span-12" : "col-span-6",
+                )}
               >
                 {item.type === "video" ? (
                   <video
                     src={getMediaUrl(item.path, item.type)}
-                    className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover hover:scale-105 transition-all duration-700 aspect-4/5"
                     muted
                     loop
                     autoPlay
@@ -92,6 +96,7 @@ export default function ProjectGallery({
                   <img
                     src={getMediaUrl(item.path, item.type)}
                     alt={item.alt}
+                    title={item.alt}
                     className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
                   />
                 )}
@@ -173,8 +178,10 @@ export default function ProjectGallery({
   );
 }
 
-function getMediaUrl(path: string, type?: "video" | "image") {
-  if (type === "video") {
+export function getMediaUrl(path: string, type?: "video" | "image") {
+  if (path.startsWith("/images")) {
+    return path;
+  } else if (type === "video") {
     return getCldVideoUrl({
       src: path,
       width: 1920,
@@ -183,8 +190,8 @@ function getMediaUrl(path: string, type?: "video" | "image") {
   } else {
     return getCldImageUrl({
       src: path,
-      width: 540,
-      height: 675,
+      width: 1080,
+      height: 1350,
     });
   }
 }

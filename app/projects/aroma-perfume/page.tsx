@@ -13,7 +13,7 @@ export default function CaseStudyPage() {
 
       <ProjectHero
         title="Aroma Perfume"
-        banner="/images/render-17.png"
+        banner="/images/banner-2.png"
         tagline="Visual Identity & Product Campaign"
       />
 
@@ -31,67 +31,86 @@ export default function CaseStudyPage() {
       />
 
       <ProjectGallery
-        title="Art Direction"
+        title="Animation"
         gallery={[
           {
             path: "Portfolio/Projects/Aroma Perfume/Perfume_Animation_1_w4i8rd",
-            alt: "Fragrance bottle hero shot",
+            alt: "",
             type: "video",
           },
           {
             path: "Portfolio/Projects/Aroma Perfume/Perfume_Animation_2_vgd3h6",
-            alt: "Fragrance bottle hero shot",
+            alt: "",
             type: "video",
-          },
-          {
-            path: "Portfolio/Projects/Aroma Perfume/render-01",
-            alt: "Fragrance bottle hero shot",
-          },
-          {
-            path: "Portfolio/Projects/Aroma Perfume/render-02",
-            alt: "Fragrance bottle hero shot",
-          },
-          {
-            path: "Portfolio/Projects/Aroma Perfume/render-03",
-            alt: "Fragrance bottle hero shot",
-          },
-          {
-            path: "Portfolio/Projects/Aroma Perfume/render-04",
-            alt: "Fragrance bottle hero shot",
           },
         ]}
       />
 
-      {/*<ProjectGallery
-        title="Product Shots"
+      <ProjectGallery
+        title="Still shots"
         gallery={[
           {
-            src: "/images/render-1.png",
-            alt: "Dark studio lifestyle render",
-            span: "normal",
+            path: "Portfolio/Projects/Aroma Perfume/final-1_mam19t",
+            alt: "",
           },
           {
-            src: "/images/render-2.png",
-            alt: "Dark studio lifestyle render",
-            span: "normal",
+            path: "Portfolio/Projects/Aroma Perfume/final-2_cgwub3",
+            alt: "",
           },
           {
-            src: "/images/render-3.png",
-            alt: "Dark studio lifestyle render",
-            span: "normal",
+            path: "Portfolio/Projects/Aroma Perfume/final-3_celgqc",
+            alt: "",
           },
           {
-            src: "/images/render-6.png",
-            alt: "Dark studio lifestyle render",
-            span: "normal",
+            path: "Portfolio/Projects/Aroma Perfume/final-4_aoympf",
+            alt: "",
           },
           {
-            src: "/images/render-7.png",
-            alt: "Dark studio lifestyle render",
-            span: "normal",
+            path: "Portfolio/Projects/Aroma Perfume/final-5_mgf4za",
+            alt: "",
+          },
+          {
+            path: "Portfolio/Projects/Aroma Perfume/final-6_kznlyr",
+            alt: "",
           },
         ]}
-      />*/}
+      />
+
+      <ProjectGallery
+        title="Clean shots"
+        gallery={[
+          {
+            path: "Portfolio/Projects/Aroma Perfume/render-1_np0bsh",
+            alt: "",
+          },
+          {
+            path: "Portfolio/Projects/Aroma Perfume/render-2_kkzzn2",
+            alt: "",
+          },
+          {
+            path: "Portfolio/Projects/Aroma Perfume/render-3_yyzr0b",
+            alt: "",
+          },
+          {
+            path: "Portfolio/Projects/Aroma Perfume/render-4_exrjtz",
+            alt: "",
+          },
+        ]}
+      />
+
+      <ProjectGallery
+        title="Process & Moodboard"
+        gallery={[
+          {
+            path: "Portfolio/Projects/Aroma Perfume/process-1_yeuzm6",
+            alt: "",
+          },
+          {
+            path: "Portfolio/Projects/Aroma Perfume/process-2_pjaeyh",
+            alt: "Moodboard",
+          },
+        ]}
+      />
 
       <ProjectCTA />
 
