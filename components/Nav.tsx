@@ -31,29 +31,23 @@ export default function Nav() {
 
   return (
     <>
-      <nav
-        className="fixed inset-x-0 top-0 z-50 px-6 py-8"
-        style={{
-          background:
-            "linear-gradient(to bottom,rgba(8,8,8,.96) 0%,transparent 100%)",
-        }}
-      >
+      <nav className="z-50 px-6 py-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Logo onClick={() => setOpen(false)} />
+          <Logo theme="light" onClick={() => setOpen(false)} />
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-10">
-            {NAV_LINKS.map(({ href, label }) => (
+            {/*{NAV_LINKS.map(({ href, label }) => (
               <UnderlineLink
                 key={href}
                 href={href}
-                className={`nav-lnk text-sm tracking-wide uppercase no-underline${
+                className={`nav-lnk text-sm text-black font-semibold tracking-wide uppercase no-underline${
                   active === href.slice(1) ? " on" : ""
                 }`}
               >
                 {label}
               </UnderlineLink>
-            ))}
+            ))}*/}
             <Button href="#contact" size="sm">
               Let's Talk
             </Button>

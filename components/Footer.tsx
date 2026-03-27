@@ -7,11 +7,11 @@ const socials = ["in", "be", "ig", "yt"];
 
 export default function Footer() {
   return (
-    <footer className="bg-ink2 border-t border-white/[.04] px-6 pt-8 pb-8">
+    <footer className="bg-ink2 border-t border-white/[.04] p-6">
       <Container>
         <div className="flex justify-between items-center">
           {/* Brand */}
-          <Logo />
+          <Logo theme="dark" />
 
           <p className="text-sm  text-dim/90 font-medium text-center">
             © {CURRENT_YEAR} Soumak. All rights reserved.

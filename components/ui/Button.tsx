@@ -22,11 +22,11 @@ export default function Button({
   disabled = false,
 }: ButtonProps) {
   const base =
-    "btn-cta inline-flex items-center justify-center font-bold uppercase no-underline bg-gold text-ink tracking-widest disabled:opacity-40 disabled:cursor-not-allowed";
+    "btn-cta inline-flex items-center rounded-full text-cream uppercase justify-center font-semibold no-underline bg-gold disabled:opacity-40 disabled:cursor-not-allowed";
 
   const sizes = {
-    sm: "gap-3 text-[.68rem] tracking-[.18em] px-6 py-3",
-    default: "gap-5 text-xs tracking-[.22em] px-5 py-4 lg:px-9 lg:py-5",
+    sm: "gap-3 text-xs tracking-wide px-5 py-3",
+    default: "gap-5 text-sm px-5 py-4 lg:px-7 lg:py-4 tracking-wide",
   };
 
   const cls = cn(base, sizes[size], className);

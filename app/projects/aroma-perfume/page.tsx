@@ -2,8 +2,6 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import ProjectCTA from "@/components/projects/ProjectCTA";
 import ProjectGallery from "@/components/projects/ProjectGallery";
-import ProjectHero from "@/components/projects/ProjectHero";
-import ProjectInfo from "@/components/projects/ProjectInfo";
 import ProjectOverview from "@/components/projects/ProjectOverview";
 
 export default function CaseStudyPage() {
@@ -11,27 +9,12 @@ export default function CaseStudyPage() {
     <>
       <Nav />
 
-      <ProjectHero
-        title="Aroma Perfume"
-        banner="/images/banner-2.png"
-        tagline="Visual Identity & Product Campaign"
-      />
-
-      <ProjectInfo
-        info={{
-          type: "Concept Project",
-          year: "2026",
-          scope: "Product Modelling, Art Direction, Animation",
-        }}
-      />
-
       <ProjectOverview
-        title="The Overview"
         description="A concept project for Aroma, a fragrance house built on quiet luxury and the richness of oud and smoke. The work focuses on product modeling, dramatic scene composition, and lighting as a storytelling tool — placing the bottle in environments that mirror its character. Each render and animation follows a slow, deliberate reveal, letting light travel across glass surfaces. The result is a visual language that doesn't sell a perfume — it evokes the feeling of wearing one."
+        banner="/images/banner-2.png"
       />
 
       <ProjectGallery
-        title="Animation"
         gallery={[
           {
             path: "Portfolio/Projects/Aroma Perfume/Perfume_Animation_1_w4i8rd",
@@ -43,12 +26,6 @@ export default function CaseStudyPage() {
             alt: "",
             type: "video",
           },
-        ]}
-      />
-
-      <ProjectGallery
-        title="Still shots"
-        gallery={[
           {
             path: "Portfolio/Projects/Aroma Perfume/final-1_mam19t",
             alt: "",
@@ -72,42 +49,6 @@ export default function CaseStudyPage() {
           {
             path: "Portfolio/Projects/Aroma Perfume/final-6_kznlyr",
             alt: "",
-          },
-        ]}
-      />
-
-      <ProjectGallery
-        title="Clean shots"
-        gallery={[
-          {
-            path: "Portfolio/Projects/Aroma Perfume/render-1_np0bsh",
-            alt: "",
-          },
-          {
-            path: "Portfolio/Projects/Aroma Perfume/render-2_kkzzn2",
-            alt: "",
-          },
-          {
-            path: "Portfolio/Projects/Aroma Perfume/render-3_yyzr0b",
-            alt: "",
-          },
-          {
-            path: "Portfolio/Projects/Aroma Perfume/render-4_exrjtz",
-            alt: "",
-          },
-        ]}
-      />
-
-      <ProjectGallery
-        title="Process & Moodboard"
-        gallery={[
-          {
-            path: "Portfolio/Projects/Aroma Perfume/process-1_yeuzm6",
-            alt: "",
-          },
-          {
-            path: "Portfolio/Projects/Aroma Perfume/process-2_pjaeyh",
-            alt: "Moodboard",
           },
         ]}
       />

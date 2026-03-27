@@ -1,13 +1,23 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export default function ({ onClick }: { onClick?: () => void }) {
+export default function ({
+  onClick,
+  theme,
+}: {
+  theme?: "light" | "dark";
+  onClick?: () => void;
+}) {
   return (
     <Link
       href="/"
-      className="font-display text-3xl uppercase text-white no-underline"
+      className={cn(
+        "font-logo text-3xl uppercase no-underline",
+        theme === "light" ? "text-inc" : "text-cream",
+      )}
       onClick={onClick}
     >
-      SOUMAK<span className="text-gold">.</span>
+      SOUMAK<span>.</span>
     </Link>
   );
 }

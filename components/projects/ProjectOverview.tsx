@@ -1,22 +1,19 @@
 import Container from "../ui/Container";
 
 export default function ProjectOverview({
-  title,
   description,
+  banner,
 }: {
-  title: string;
   description: string;
+  banner: string;
 }) {
   return (
-    <section className="bg-ink2 px-6 py-16 lg:py-28">
+    <section className="px-6 mb-16 lg:mb-20">
       <Container>
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4 mb-6 text-sm tracking-[.35em] uppercase text-gold">
-            <span className="block w-8 h-px bg-gold" />
-            {title}
-            <span className="block w-8 h-px bg-gold" />
-          </div>
-          <p className="font-body font-light italic text-white/80 leading-[1.6] text-lg lg:text-2xl">
+        <img src={banner} />
+
+        <div className="max-w-5xl mx-auto text-center my-16 lg:my-20">
+          <p className="font-body font-light italic text-inc leading-[1.6] text-lg lg:text-xl">
             {description}
           </p>
         </div>

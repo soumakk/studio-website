@@ -14,10 +14,8 @@ export interface GalleryImage {
 
 export default function ProjectGallery({
   gallery,
-  title,
 }: {
   gallery: GalleryImage[];
-  title: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
@@ -63,11 +61,11 @@ export default function ProjectGallery({
   };
 
   return (
-    <section className="bg-ink px-6 py-16 lg:py-28">
+    <section className="px-6 my-16 lg:my-20">
       <Container>
-        <div className="flex items-center gap-4 mb-12 text-sm tracking-[.35em] uppercase text-gold">
+        {/*<div className="flex items-center gap-4 mb-12 text-sm tracking-[.35em] uppercase text-gold">
           <span className="block w-8 h-px bg-gold" /> {title}
-        </div>
+        </div>*/}
 
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
@@ -107,7 +105,7 @@ export default function ProjectGallery({
 
         {/* Lightbox Modal */}
         {isOpen && (
-          <div className="fixed inset-0 z-50 bg-black/95 flex flex-col">
+          <div className="fixed inset-0 z-50 bg-black/90 flex flex-col">
             {/* Close button */}
             <button
               onClick={() => setIsOpen(false)}
@@ -130,7 +128,7 @@ export default function ProjectGallery({
                         {item.type === "video" ? (
                           <video
                             src={getMediaUrl(item.path, item.type)}
-                            className="max-h-[90vh] w-auto max-w-full object-contain"
+                            className="max-h-[100vh] w-auto max-w-full object-contain"
                             controls
                             // autoPlay
                             loop
@@ -140,7 +138,7 @@ export default function ProjectGallery({
                           <img
                             src={getMediaUrl(item.path, item.type)}
                             alt={item.alt}
-                            className="max-h-[90vh] w-auto max-w-full object-contain select-none"
+                            className="max-h-[100vh] w-auto max-w-full object-contain select-none"
                             draggable={false}
                           />
                         )}

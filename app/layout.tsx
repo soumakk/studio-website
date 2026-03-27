@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Outfit, Bebas_Neue } from "next/font/google";
+import { DM_Sans, Instrument_Serif, Bebas_Neue } from "next/font/google";
 import "./globals.css";
+
+const instrument = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-instrument",
+});
 
 const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
@@ -8,7 +14,7 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebasNeue",
 });
 
-const outfit = Outfit({
+const outfit = DM_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-outfit",
@@ -28,11 +34,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scroll-smooth ${bebasNeue.variable} ${outfit.variable}`}
+      className={`scroll-smooth ${bebasNeue.variable} ${outfit.variable} ${instrument.variable}`}
     >
-      <body className="bg-ink text-stone overflow-x-hidden font-body">
-        {children}
-      </body>
+      <body className="overflow-x-hidden font-body">{children}</body>
     </html>
   );
 }

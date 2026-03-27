@@ -14,14 +14,11 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-ink px-6 py-16 lg:py-28">
       <Container>
-        <SectionHeading
-          subHeading=" Let's Work Together"
-          heading={
-            <>
-              Start a <em className="italic text-gold-lt">project</em>
-            </>
-          }
-        />
+        <h2
+          className={`font-display font-light leading-none text-5xl text-cream mb-5`}
+        >
+          <span className="italic text-gold">Start a</span> project
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-24 items-start">
           {/* Info */}
